@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CategoryQuizApp</string>
+    <string name="category_title">Select a Category</string>
+    <string name="question_title">Questions</string>
+    <string name="error_message">Something went wrong</string>
+    <string name="retry">Retry</string>
 </resources>
