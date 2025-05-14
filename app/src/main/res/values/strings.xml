@@ -1,7 +1,19 @@
 <resources>
+    <!-- App -->
     <string name="app_name">CategoryQuizApp</string>
+
+    <!-- Category Screen -->
     <string name="category_title">Select a Category</string>
+    <string name="category_loading">Loading categories...</string>
+    <string name="category_error">Failed to load categories</string>
+
+    <!-- Question Screen -->
     <string name="question_title">Questions</string>
-    <string name="error_message">Something went wrong</string>
+    <string name="question_loading">Loading questions...</string>
+    <string name="question_error">Failed to load questions</string>
+
+    <!-- Common -->
     <string name="retry">Retry</string>
+    <string name="error_generic">Something went wrong</string>
+    <string name="back">Back</string>
 </resources>

@@ -2,7 +2,7 @@
 # Versions
 # =================================
 [versions]
-agp = "8.5.2" # Android Gradle Plugin
+agp = "8.5.0" # Android Gradle Plugin
 coilCompose = "2.2.2" # Coil library for image loading in Jetpack Compose
 converterGson = "2.11.0" # Gson converter for Retrofit
 firebaseBom = "33.13.0" # Firebase BOM (includes all Firebase dependencies)
@@ -10,20 +10,20 @@ hiltCompiler = "2.51.1" # Dagger Hilt compiler
 javapoet = "1.13.0" # JavaPoet library
 constraintlayout = "2.2.1" # constraintlayout dependency
 kotlin = "1.9.10" # Kotlin language version
-coreKtx = "1.16.0" # Android Core KTX extensions
+coreKtx = "1.12.0" # Android Core KTX extensions
 junit = "4.13.2" # JUnit 4 for unit testing
 hamcrest = "2.2" # Hamcrest for testing
 junitVersion = "1.2.1" # AndroidX JUnit extensions
 espressoCore = "3.6.1" # Espresso for UI testing
 kotlinxCoroutinesAndroid = "1.8.1" # Coroutines for Android
 kotlinxCoroutinesCore = "1.8.1" # Core Coroutines
-lifecycleLivedataKtx = "2.9.0" # LiveData KTX extensions
-lifecycleRuntimeKtx = "2.9.0" # Lifecycle Runtime KTX extensions
+lifecycleLivedataKtx = "2.6.2" # LiveData KTX extensions
+lifecycleRuntimeKtx = "2.6.2" # Lifecycle Runtime KTX extensions
 activityCompose = "1.10.1" # Activity Compose integration
-composeBom = "2025.05.00" # Compose BOM (Bill of Materials)
-lifecycleViewmodelKtx = "2.9.0" # ViewModel KTX extensions
+composeBom = "2023.10.01" # Compose BOM (Bill of Materials)
+lifecycleViewmodelKtx = "2.6.2" # ViewModel KTX extensions
 material = "1.8.1" # Material components
-navigation = "2.9.0" # Navigation component
+navigation = "2.7.7" # Navigation component
 paging = "3.3.6" # Paging library
 retrofit = "2.11.0" # Retrofit for networking
 room = "2.7.1" # Room database
