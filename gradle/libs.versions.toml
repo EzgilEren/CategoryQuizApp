@@ -2,32 +2,31 @@
 # Versions
 # =================================
 [versions]
-agp = "8.5.0" # Android Gradle Plugin
+agp = "8.5.2" # Android Gradle Plugin
 coilCompose = "2.2.2" # Coil library for image loading in Jetpack Compose
 converterGson = "2.11.0" # Gson converter for Retrofit
 firebaseBom = "33.13.0" # Firebase BOM (includes all Firebase dependencies)
 hiltCompiler = "2.51.1" # Dagger Hilt compiler
 javapoet = "1.13.0" # JavaPoet library
-constraintlayout = "2.2.1" # constraintlayout dependency
 kotlin = "1.9.10" # Kotlin language version
-coreKtx = "1.12.0" # Android Core KTX extensions
+coreKtx = "1.15.0" # Android Core KTX extensions
 junit = "4.13.2" # JUnit 4 for unit testing
 hamcrest = "2.2" # Hamcrest for testing
 junitVersion = "1.2.1" # AndroidX JUnit extensions
 espressoCore = "3.6.1" # Espresso for UI testing
 kotlinxCoroutinesAndroid = "1.8.1" # Coroutines for Android
 kotlinxCoroutinesCore = "1.8.1" # Core Coroutines
-lifecycleLivedataKtx = "2.6.2" # LiveData KTX extensions
-lifecycleRuntimeKtx = "2.6.2" # Lifecycle Runtime KTX extensions
-activityCompose = "1.10.1" # Activity Compose integration
-composeBom = "2023.10.01" # Compose BOM (Bill of Materials)
-lifecycleViewmodelKtx = "2.6.2" # ViewModel KTX extensions
-material = "1.8.1" # Material components
-navigation = "2.7.7" # Navigation component
-paging = "3.3.6" # Paging library
+lifecycleLivedataKtx = "2.8.7" # LiveData KTX extensions
+lifecycleRuntimeKtx = "2.8.7" # Lifecycle Runtime KTX extensions
+activityCompose = "1.9.3" # Activity Compose integration
+composeBom = "2024.12.01" # Compose BOM (Bill of Materials)
+lifecycleViewmodelKtx = "2.8.7" # ViewModel KTX extensions
+material = "1.7.6" # Material components
+navigation = "2.8.5" # Navigation component
+paging = "3.3.5" # Paging library
 retrofit = "2.11.0" # Retrofit for networking
-room = "2.7.1" # Room database
-workManager = "2.10.1" # WorkManager for background tasks
+room = "2.6.1" # Room database
+workManager = "2.10.0" # WorkManager for background tasks
 datastore = "1.2.0" # Jetpack DataStore
 ui = "1.8.1" # Compose UI components
 uiTestJunit4 = "1.8.1" # Compose UI testing with JUnit 4
@@ -45,6 +44,8 @@ splashscreen = "1.0.1" # Splash Screen
 truth = "1.1.5" # Truth for assertions in testing
 coroutines-test = "1.6.4" # Coroutines test utilities
 hilt = "2.44" # Hilt dependency injection framework
+glide = "4.16.0"
+dotsindicator = "5.0"
 
 # =================================
 # Libraries
@@ -113,6 +114,13 @@ kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-c
 
 # Splash
 splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "splashscreen" }
+
+# Glide
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+
+#Dots
+dotsindicator = { module = "com.tbuonomo:dotsindicator", version.ref = "dotsindicator" }
 
 # Testing
 junit = { group = "junit", name = "junit", version.ref = "junit" }

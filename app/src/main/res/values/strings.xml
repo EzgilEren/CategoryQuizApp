@@ -2,6 +2,19 @@
     <!-- App -->
     <string name="app_name">CategoryQuizApp</string>
 
+    <!-- Onboarding Screen -->
+    <string name="onboarding_title_1">Take a photo to identify the quiz!</string>
+    <string name="onboarding_desc_1">Just one tap to identify and play!</string>
+
+    <string name="onboarding_title_2">Get your quiz guides</string>
+    <string name="onboarding_desc_2">Review, retake, and master any topic easily.</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_title">Welcome to QuizApp</string>
+    <string name="welcome_subtitle">Identify your skills with fun and fast quizzes!</string>
+    <string name="get_started">Get Started</string>
+    <string name="terms_info">By tapping next, you agree to our Terms of Use &amp; Privacy Policy</string>
+
     <!-- Category Screen -->
     <string name="category_title">Select a Category</string>
     <string name="category_loading">Loading categories...</string>
@@ -16,4 +29,6 @@
     <string name="retry">Retry</string>
     <string name="error_generic">Something went wrong</string>
     <string name="back">Back</string>
+    <string name="textOnboarding">Review, retake, and master any topic easily</string>
+    <string name="explainOnboardingText">Get plant care guides</string>
 </resources>

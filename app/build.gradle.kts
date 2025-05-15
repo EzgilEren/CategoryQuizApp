@@ -109,6 +109,13 @@ dependencies {
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
 
+    // Glide
+    implementation(libs.glide)
+    ksp(libs.glide.compiler)
+
+    // Dots
+    implementation(libs.dotsindicator)
+
     // Splash Screen
     implementation(libs.splashscreen)
 
