@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.ezgieren.categoryquizapp"
+    namespace = "com.ezgieren.plantidentifyapp"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.ezgieren.categoryquizapp"
+        applicationId = "com.ezgieren.plantidentifyapp"
         minSdk = 21
         targetSdk = 35
         versionCode = 1
@@ -23,7 +23,6 @@ android {
         }
 
         // API key added in BuildConfig
-        buildConfigField("String", "API_KEY", project.properties["API_KEY"] as String)
         buildConfigField("String", "BASE_URL", project.properties["BASE_URL"] as String)
     }
 

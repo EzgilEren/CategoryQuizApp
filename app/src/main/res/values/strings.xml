@@ -1,6 +1,6 @@
 <resources>
     <!-- App -->
-    <string name="app_name">CategoryQuizApp</string>
+    <string name="app_name">PlantIdentifyApp</string>
 
     <!-- Onboarding Screen -->
     <string name="onboarding_title_1">Take a photo to identify the quiz!</string>

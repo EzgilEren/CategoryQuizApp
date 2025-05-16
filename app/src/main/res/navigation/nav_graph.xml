@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/getStartedFragment"
-        android:name="com.ezgieren.categoryquizapp.ui.start.GetStartedFragment"
+        android:name="com.ezgieren.plantidentifyapp.ui.start.GetStartedFragment"
         android:label="Get Started">
         <action
             android:id="@+id/action_getStarted_to_onboarding"
@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/onboardingFragment"
-        android:name="com.ezgieren.categoryquizapp.ui.onboarding.OnboardingFragment"
+        android:name="com.ezgieren.plantidentifyapp.ui.onboarding.OnboardingFragment"
         android:label="Onboarding">
         <action
             android:id="@+id/action_onboarding_to_category"
@@ -24,7 +24,7 @@
 
     <fragment
         android:id="@+id/categoryFragment"
-        android:name="com.ezgieren.categoryquizapp.ui.category.CategoryFragment"
+        android:name="com.ezgieren.plantidentifyapp.ui.category.CategoryFragment"
         android:label="Categories">
         <action
             android:id="@+id/action_categoryFragment_to_questionFragment"
@@ -33,7 +33,7 @@
 
     <fragment
         android:id="@+id/questionFragment"
-        android:name="com.ezgieren.categoryquizapp.ui.question.QuestionFragment"
+        android:name="com.ezgieren.plantidentifyapp.ui.question.QuestionFragment"
         android:label="Questions">
         <argument
             android:name="categoryId"
