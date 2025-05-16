@@ -11,4 +11,8 @@
     <color name="secondaryColor">#03DAC6</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="primaryGreen">#28AF6E</color>
+    <color name="primaryText">#13231B</color>
+    <color name="secondaryText">#13231BB2</color>
+    <color name="termsText">#597165B2</color>
 </resources>
