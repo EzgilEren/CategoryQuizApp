@@ -7,6 +7,7 @@ coilCompose = "2.2.2" # Coil library for image loading in Jetpack Compose
 converterGson = "2.11.0" # Gson converter for Retrofit
 firebaseBom = "33.13.0" # Firebase BOM (includes all Firebase dependencies)
 hiltCompiler = "2.51.1" # Dagger Hilt compiler
+composeCompiler = "1.5.3" # Compose compiler
 javapoet = "1.13.0" # JavaPoet library
 kotlin = "1.9.10" # Kotlin language version
 coreKtx = "1.15.0" # Android Core KTX extensions
@@ -66,6 +67,7 @@ androidx-material = { module = "androidx.compose.material:material", version.ref
 androidx-animation = { module = "androidx.compose.animation:animation", version.ref = "animation" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "composeCompiler" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version = "constraintlayout" }
 
 # Dependency Injection (Hilt)
@@ -142,3 +144,4 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hiltCompiler" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+androidx-navigation-safe-args = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }

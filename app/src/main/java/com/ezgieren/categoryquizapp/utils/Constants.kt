@@ -11,7 +11,7 @@ object Constants {
 
     // Error messages
     const val API_ERROR_MESSAGE = "Something went wrong"
-    const val UNKNOWN_ERROR_MESSAGE = "Unknown error occurred"
+    const val DEFAULT_ERROR_MESSAGE = "Unknown error occurred"
     const val NETWORK_ERROR_MESSAGE = "Check your internet connection"
     const val NO_DETAILS = "No details available"
 }

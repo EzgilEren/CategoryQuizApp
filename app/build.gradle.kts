@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.androidx.navigation.safe.args)
 }
 
 android {
@@ -74,6 +75,7 @@ dependencies {
     implementation(libs.androidx.animation)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.compose.compiler)
 
     // Hilt for Dependency Injection
     implementation(libs.hilt.android)

@@ -7,10 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.ezgieren.categoryquizapp.databinding.CategoryFragmentBinding
-import com.ezgieren.categoryquizapp.viewmodel.CategoryViewModel
+import com.ezgieren.categoryquizapp.utils.Constants
 import com.ezgieren.categoryquizapp.utils.Resource
+import com.ezgieren.categoryquizapp.viewmodel.CategoryViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -37,14 +39,14 @@ class CategoryFragment : Fragment() {
         setupRecyclerView()
         setupObservers()
         setupRetryButton()
-
-        // Fetch categories
         viewModel.fetchCategories()
     }
 
     private fun setupRecyclerView() {
         categoryAdapter = CategoryAdapter { category ->
-            // TODO: kategoriye tıklanınca navigasyon yapılacak
+            val action = CategoryFragmentDirections
+                .actionCategoryFragmentToQuestionFragment(category.id)
+            findNavController().navigate(action)
         }
 
         binding.rvCategories.apply {
@@ -69,7 +71,7 @@ class CategoryFragment : Fragment() {
                     }
                     is Resource.Error -> {
                         showLoading(false)
-                        showError(true, state.message ?: "Unknown error")
+                        showError(true, state.message ?: Constants.DEFAULT_ERROR_MESSAGE)
                     }
                 }
             }

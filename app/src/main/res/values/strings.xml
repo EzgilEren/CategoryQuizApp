@@ -21,11 +21,17 @@
     <string name="category_error">Failed to load categories</string>
 
     <!-- Question Screen -->
+    <string name="question_screen_title">Question Screen</string>
     <string name="question_title">Questions</string>
     <string name="question_loading">Loading questions...</string>
+    <string name="question_placeholder">Category ID: Loading...</string>
+    <string name="question_category_id">Category ID: %1$d</string>
     <string name="question_error">Failed to load questions</string>
 
     <!-- Common -->
+    <string name="error_unknown">Unknown error occurred</string>
+    <string name="error_fetching_categories">Failed to load categories</string>
+    <string name="loading_categories">Loading categories...</string>
     <string name="retry">Retry</string>
     <string name="error_generic">Something went wrong</string>
     <string name="back">Back</string>

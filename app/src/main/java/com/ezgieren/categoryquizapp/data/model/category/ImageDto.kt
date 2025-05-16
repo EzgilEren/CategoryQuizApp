@@ -1,4 +1,4 @@
-package com.ezgieren.categoryquizapp.data.model
+package com.ezgieren.categoryquizapp.data.model.category
 
 import com.google.gson.annotations.SerializedName
 

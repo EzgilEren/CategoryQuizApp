@@ -6,12 +6,14 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.ezgieren.categoryquizapp.data.model.CategoryDto
+import com.ezgieren.categoryquizapp.R
+import com.ezgieren.categoryquizapp.data.model.category.CategoryDto
 import com.ezgieren.categoryquizapp.databinding.CategoryItemBinding
+import com.ezgieren.categoryquizapp.domain.model.Category
 
 class CategoryAdapter(
-    private val onItemClick: (CategoryDto) -> Unit
-) : ListAdapter<CategoryDto, CategoryAdapter.CategoryViewHolder>(CategoryDiffCallback()) {
+    private val onItemClick: (Category) -> Unit
+) : ListAdapter<Category, CategoryAdapter.CategoryViewHolder>(CategoryDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
         val binding = CategoryItemBinding.inflate(
@@ -27,11 +29,18 @@ class CategoryAdapter(
     inner class CategoryViewHolder(private val binding: CategoryItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: CategoryDto) {
+        fun bind(item: Category) {
             binding.tvCategoryTitle.text = item.title
-            Glide.with(binding.ivCategory.context)
-                .load(item.image.url)
-                .into(binding.ivCategory)
+
+            val imageUrl = item.imageUrl
+            if (imageUrl.isNotEmpty()) {
+                Glide.with(binding.ivCategory.context)
+                    .load(imageUrl)
+                    .centerCrop()
+                    .into(binding.ivCategory)
+            } else {
+                binding.ivCategory.setImageResource(R.drawable.placeholder_image)
+            }
 
             binding.root.setOnClickListener {
                 onItemClick(item)
@@ -39,12 +48,12 @@ class CategoryAdapter(
         }
     }
 
-    class CategoryDiffCallback : DiffUtil.ItemCallback<CategoryDto>() {
-        override fun areItemsTheSame(oldItem: CategoryDto, newItem: CategoryDto): Boolean {
+    class CategoryDiffCallback : DiffUtil.ItemCallback<Category>() {
+        override fun areItemsTheSame(oldItem: Category, newItem: Category): Boolean {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: CategoryDto, newItem: CategoryDto): Boolean {
+        override fun areContentsTheSame(oldItem: Category, newItem: Category): Boolean {
             return oldItem == newItem
         }
     }
