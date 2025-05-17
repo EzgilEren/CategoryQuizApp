@@ -1,38 +1,119 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
-    android:padding="24dp">
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <!-- Status bar -->
+    <View
+        android:id="@+id/statusBar"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- Title -->
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_bold"
-        android:gravity="center"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/roboto_regular"
+        android:letterSpacing="-0.04"
         android:lineSpacingExtra="4dp"
         android:text="@string/onboarding_title_2"
-        android:textAlignment="center"
         android:textColor="#13231B"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="48dp"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="28sp"
+        android:textAlignment="viewStart"
+        app:layout_constraintTop_toBottomOf="@id/statusBar"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Phone with Care Guide Image -->
+    <!-- Brush under title -->
     <ImageView
-        android:id="@+id/imgGuidePhone"
-        android:layout_width="270dp"
-        android:layout_height="460dp"
-        android:layout_marginTop="24dp"
+        android:id="@+id/underlineBrush"
+        android:layout_width="136dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="168dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/onboarding2"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/brush"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Background leaf -->
+    <ImageView
+        android:id="@+id/plantLeaf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:alpha="0.2"
+        android:scaleType="fitXY"
+        android:src="@drawable/plantleaf"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Black mockup frame as background only -->
+    <View
+        android:id="@+id/mockupFrame"
+        android:layout_width="344dp"
+        android:layout_height="660dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/black_phone_frame_bg"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Phone content (placed on top of frame) -->
+    <ImageView
+        android:id="@+id/imgPhone"
+        android:layout_width="320dp"
+        android:layout_height="640dp"
+        android:layout_marginTop="70dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:src="@drawable/phone_onboarding2"
+        android:background="@drawable/phone_screen_radius_mask"
+        android:clipToOutline="true"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Overlay card -->
+    <ImageView
+        android:id="@+id/imgOverlay"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-60dp"
+        android:layout_marginEnd="0dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/www_onboarding2"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintEnd_toEndOf="@id/imgPhone" />
+
+    <!-- Spray icon -->
+    <ImageView
+        android:id="@+id/iconSpray"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="-12dp"
+        android:layout_marginStart="-12dp"
+        android:src="@drawable/icon_spray"
+        app:layout_constraintTop_toTopOf="@id/imgOverlay"
+        app:layout_constraintStart_toStartOf="@id/imgOverlay" />
+
+    <!-- Sun icon -->
+    <ImageView
+        android:id="@+id/iconSun"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="-12dp"
+        android:layout_marginEnd="-12dp"
+        android:src="@drawable/icon_sun"
+        app:layout_constraintTop_toTopOf="@id/imgOverlay"
+        app:layout_constraintEnd_toEndOf="@id/imgOverlay" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
