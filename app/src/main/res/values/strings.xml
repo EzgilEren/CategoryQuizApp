@@ -4,8 +4,13 @@
 
     <!-- Welcome Screen -->
     <string name="welcome_title">Welcome to PlantApp</string>
+    <string name="welcome_to">Welcome to </string>
+    <string name="plantApp">"" PlantApp</string>
     <string name="welcome_subtitle">Identify more than 3000+ plants and 88% accuracy.</string>
     <string name="get_started">Get Started</string>
+    <string name="obj_spray">Spray Icon</string>
+    <string name="obj_sun">Sunlight Icon</string>
+    <string name="obj_water">Water Icon</string>
     <string name="terms_info">By tapping next, you are agreeing to PlantID Terms of Use &amp; Privacy Policy.</string>
 
     <!-- Onboarding Screen -->

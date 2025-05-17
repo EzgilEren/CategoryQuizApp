@@ -1,93 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/getStartedLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_get_started_gradient">
+    android:background="@drawable/bg_get_started_gradient"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
 
     <!-- Status Bar -->
     <View
         android:id="@+id/statusBar"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="8dp"
         android:background="@android:color/transparent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Title -->
+    <!-- Title Text Group -->
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="33dp"
-        android:text="Welcome to PlantApp"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/welcome_to"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusBar" />
+
+    <!-- Bold Title Part -->
+    <TextView
+        android:id="@+id/tvTitleBold"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/plantApp"
         android:textColor="#13231B"
         android:textSize="28sp"
-        android:fontFamily="@font/roboto_bold"
-        app:layout_constraintTop_toBottomOf="@id/statusBar"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toEndOf="@id/tvTitle"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
 
-    <!-- Subtitle -->
+    <!-- Subtitle Text -->
     <TextView
         android:id="@+id/tvSubtitle"
         android:layout_width="300dp"
         android:layout_height="44dp"
-        android:text="Identify more than 3000+ plants and 88% accuracy."
-        android:textSize="16sp"
-        android:fontFamily="@font/roboto_regular"
-        android:lineSpacingExtra="6dp"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/tvTitle"/>
+        android:fontFamily="@font/roboto_light"
+        android:lineHeight="22sp"
+        android:text="@string/welcome_subtitle"
+        android:textColor="#13231B"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
     <!-- Plant Image -->
     <ImageView
-        android:id="@+id/imgLogo"
+        android:id="@+id/imgPlant"
         android:layout_width="375dp"
         android:layout_height="499dp"
+        android:layout_marginTop="24dp"
+        android:elevation="0dp"
+        android:scaleType="fitCenter"
         android:src="@drawable/plant_illustration"
-        android:scaleType="centerCrop"
-        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="-7dp"
-        app:layout_constraintEnd_toEndOf="parent"  />
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle" />
+
+    <!-- Sprey -->
+    <ImageView
+        android:id="@+id/objSpray"
+        android:layout_width="112dp"
+        android:layout_height="118dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="146dp"
+        android:contentDescription="@string/obj_spray"
+        android:src="@drawable/icon_spray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Sun -->
+    <ImageView
+        android:id="@+id/objSun"
+        android:layout_width="62dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="166dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/obj_sun"
+        android:src="@drawable/icon_sun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Water Drop Icon -->
+    <ImageView
+        android:id="@+id/objWater"
+        android:layout_width="61dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="448dp"
+        android:contentDescription="@string/obj_water"
+        android:src="@drawable/icon_water_drop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Get Started Button -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardBtn"
-        android:layout_width="320dp"
+        android:layout_width="0dp"
         android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/primaryGreen"
         app:cardCornerRadius="12dp"
         app:cardElevation="0dp"
-        app:cardBackgroundColor="@color/primaryGreen"
-        app:layout_constraintTop_toBottomOf="@id/imgLogo"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/imgPlant">
 
         <TextView
             android:id="@+id/btnStart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="@font/roboto_bold"
             android:gravity="center"
             android:text="@string/get_started"
             android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:fontFamily="@font/roboto_bold"/>
+            android:textSize="16sp" />
     </androidx.cardview.widget.CardView>
 
-    <!-- Terms Text -->
+    <!-- Terms & Privacy -->
     <TextView
         android:id="@+id/tvTerms"
         android:layout_width="232dp"
         android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
         android:fontFamily="@font/roboto_regular"
-        android:lineSpacingExtra="2dp"
-        android:text="@string/terms_info"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
         android:textAlignment="center"
-        android:textColor="#597165B2"
+        android:textColor="#597165"
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardBtn"
-        app:layout_constraintVertical_bias="0.247" />
+        app:layout_constraintTop_toBottomOf="@id/cardBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

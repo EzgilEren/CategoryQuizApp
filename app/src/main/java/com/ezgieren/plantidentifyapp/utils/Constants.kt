@@ -11,6 +11,12 @@ object Constants {
     const val EMPTY = ""
     const val NO_CATEGORY = "No category"
 
+    // Terms Constants
+    const val TERMS_PREFIX = "By tapping next, you are agreeing to PlantID "
+    const val TERMS_OF_USE = "Terms of Use"
+    const val PRIVACY_POLICY = "Privacy Policy."
+
+
     // Error messages
     const val API_ERROR_MESSAGE = "Something went wrong"
     const val DEFAULT_ERROR_MESSAGE = "Unknown error occurred"
