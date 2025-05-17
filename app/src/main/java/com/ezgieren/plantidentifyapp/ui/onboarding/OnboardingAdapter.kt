@@ -1,34 +1,18 @@
 package com.ezgieren.plantidentifyapp.ui.onboarding
 
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
-import com.ezgieren.plantidentifyapp.databinding.OnboardingItemBinding
+import androidx.fragment.app.Fragment
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.ezgieren.plantidentifyapp.utils.Constants
 
-class OnboardingAdapter(
-    private val items: List<OnboardingItem>
-) : RecyclerView.Adapter<OnboardingAdapter.OnboardingViewHolder>() {
+class OnboardingAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
 
-    inner class OnboardingViewHolder(val binding: OnboardingItemBinding) :
-        RecyclerView.ViewHolder(binding.root)
+    override fun getItemCount(): Int = Constants.ONBOARDING_PAGE_COUNT
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OnboardingViewHolder {
-        val binding = OnboardingItemBinding.inflate(
-            LayoutInflater.from(parent.context),
-            parent,
-            false
-        )
-        return OnboardingViewHolder(binding)
-    }
-
-    override fun getItemCount(): Int = items.size
-
-    override fun onBindViewHolder(holder: OnboardingViewHolder, position: Int) {
-        val item = items[position]
-        holder.binding.apply {
-            imageOnboarding.setImageResource(item.imageResId)
-            titleOnboarding.text = item.title
-            descOnboarding.text = item.description
+    override fun createFragment(position: Int): Fragment {
+        return when (position) {
+            Constants.ONBOARDING_PAGE_ONE -> OnboardingStepOneFragment()
+            Constants.ONBOARDING_PAGE_TWO -> OnboardingStepTwoFragment()
+            else -> throw IllegalStateException(Constants.INVALID_ONBOARDING_POSITION)
         }
     }
 }

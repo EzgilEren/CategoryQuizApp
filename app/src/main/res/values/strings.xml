@@ -14,11 +14,11 @@
     <string name="terms_info">By tapping next, you are agreeing to PlantID Terms of Use &amp; Privacy Policy.</string>
 
     <!-- Onboarding Screen -->
-    <string name="onboarding_title_1">Take a photo to identify the quiz!</string>
-    <string name="onboarding_desc_1">Just one tap to identify and play!</string>
-
-    <string name="onboarding_title_2">Get your quiz guides</string>
-    <string name="onboarding_desc_2">Review, retake, and master any topic easily.</string>
+    <string name="onboarding_title_1">Take a photo to identify\nthe plant!</string>    <string name="onboarding_desc_1">Snap a photo and get accurate plant names and care tips.</string>
+    <string name="onboarding_title_2">Get plant <b>care guides</b></string>
+    <string name="onboarding_desc_2">Simply scan the plant and let us tell you everything about it!</string>
+    <string name="onboarding_line_1">Take a photo to</string>
+    <string name="onboarding_line_2"><b>identify</b> the plant!</string>
 
     <!-- Category Screen -->
     <string name="category_title">Select a Category</string>
@@ -42,4 +42,5 @@
     <string name="back">Back</string>
     <string name="textOnboarding">Review, retake, and master any topic easily</string>
     <string name="explainOnboardingText">Get plant care guides</string>
+    <string name="continueBtn">Continue</string>
 </resources>

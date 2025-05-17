@@ -17,6 +17,8 @@ class OnboardingFragment : Fragment() {
 
     private lateinit var onboardingAdapter: OnboardingAdapter
 
+    private lateinit var viewPager: ViewPager2
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,36 +33,18 @@ class OnboardingFragment : Fragment() {
     }
 
     private fun setupViewPager() {
-        val items = listOf(
-            OnboardingItem(
-                R.drawable.onboarding1,
-                getString(R.string.onboarding_title_1),
-                getString(R.string.onboarding_desc_1)
-            ),
-            OnboardingItem(
-                R.drawable.onboarding2,
-                getString(R.string.onboarding_title_2),
-                getString(R.string.onboarding_desc_2)
-            )
-        )
-
-        onboardingAdapter = OnboardingAdapter(items)
-        binding.viewPagerOnboarding.adapter = onboardingAdapter
-        binding.dotsIndicator.setViewPager2(binding.viewPagerOnboarding)
-
-        // Butonu sadece son sayfada göster
-        binding.viewPagerOnboarding.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-                binding.btnGetStarted.visibility =
-                    if (position == items.lastIndex) View.VISIBLE else View.INVISIBLE
-            }
-        })
+        onboardingAdapter = OnboardingAdapter(this)
+        viewPager = binding.viewPagerOnboarding
+        viewPager.adapter = onboardingAdapter
+        binding.dotsIndicator.setViewPager2(viewPager)
     }
 
     private fun setupGetStartedButton() {
         binding.btnGetStarted.setOnClickListener {
-            findNavController().navigate(R.id.action_onboarding_to_category)
+            when (viewPager.currentItem) {
+                0 -> viewPager.currentItem = 1
+                1 -> findNavController().navigate(R.id.action_onboarding_to_category)
+            }
         }
     }
 
