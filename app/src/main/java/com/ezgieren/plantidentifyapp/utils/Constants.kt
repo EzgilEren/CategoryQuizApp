@@ -11,6 +11,10 @@ object Constants {
     const val EMPTY = ""
     const val NO_CATEGORY = "No category"
 
+    // DB
+    const val PLANT_DATABASE = "plant_database"
+    const val NO_DATA = "No cached data"
+
     // Onboarding Constants
     const val ONBOARDING_PAGE_COUNT = 2
     const val ONBOARDING_PAGE_ONE = 0

@@ -36,6 +36,7 @@ class CategoryAdapter(
                 Glide.with(binding.ivCategory.context)
                     .load(imageUrl)
                     .centerCrop()
+                    .placeholder(R.drawable.bg_image_placeholder) // fallback image
                     .into(binding.ivCategory)
             } else {
                 binding.ivCategory.setImageResource(R.drawable.bg_image_placeholder)
