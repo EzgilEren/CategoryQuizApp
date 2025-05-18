@@ -26,6 +26,22 @@
     <string name="category_loading">Loading categories...</string>
     <string name="category_error">Failed to load categories</string>
 
+    <!-- Paywall Screen -->
+    <string name="paywall_plantApp_title">PlantApp </string>
+    <string name="paywall_premium_title"> Premium</string>
+    <string name="paywall_subtitle">Access All Features</string>
+    <string name="paywall_feature_unlimited">Unlimited</string>
+    <string name="paywall_feature_unlimited_desc">Plant Identify</string>
+    <string name="paywall_feature_faster">Faster</string>
+    <string name="paywall_feature_faster_desc">Process</string>
+    <string name="paywall_option_month">1 Month\n$2.99/month, auto renewable</string>
+    <string name="paywall_option_year">1 Year\nFirst 3 days free, then \$529.99/year</string>
+    <string name="paywall_save_label">Save 50%</string>
+    <string name="paywall_try_free">Try free for 3 days</string>
+    <string name="paywall_footer">After the 3-day free trial period you’ll be charged \$274.99 per year unless you cancel before the trial expires. Yearly Subscription is Auto-Renewable</string>
+    <string name="paywall_links">Terms  •  Privacy  •  Restore</string>
+    <string name="close">Close</string>
+
     <!-- Question Screen -->
     <string name="question_screen_title">Question Screen</string>
     <string name="question_title">Questions</string>

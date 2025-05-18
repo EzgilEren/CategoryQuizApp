@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/getStartedFragment">
 
@@ -19,21 +20,28 @@
         android:label="Onboarding">
         <action
             android:id="@+id/action_onboarding_to_category"
-            app:destination="@id/categoryFragment" />
+            app:destination="@id/paywallFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/categoryFragment"
-        android:name="com.ezgieren.plantidentifyapp.ui.category.CategoryFragment"
-        android:label="Categories">
+        android:id="@+id/paywallFragment"
+        android:name="com.ezgieren.plantidentifyapp.ui.paywall.PaywallFragment"
+        android:label="Paywall"
+        tools:layout="@layout/paywall_fragment">
         <action
-            android:id="@+id/action_categoryFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
+            android:id="@+id/action_paywall_to_homepage"
+            app:destination="@id/homepageFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/homepageFragment"
+        android:name="com.ezgieren.plantidentifyapp.ui.home.HomepageFragment"
+        android:label="Homepage"
+        tools:layout="@layout/homepage_fragment" />
 
     <fragment
         android:id="@+id/questionFragment"
-        android:name="com.ezgieren.plantidentifyapp.ui.question.QuestionFragment"
+        android:name="com.ezgieren.plantidentifyapp.ui.home.HomepageFragment"
         android:label="Questions">
         <argument
             android:name="categoryId"
