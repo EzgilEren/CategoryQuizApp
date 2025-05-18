@@ -17,6 +17,10 @@ object Constants {
     const val ONBOARDING_PAGE_TWO = 1
     const val INVALID_ONBOARDING_POSITION = "Invalid onboarding position"
 
+    // Preferences
+    const val PREF_NAME = "plant_prefs"
+    const val KEY_ONBOARDING_COMPLETED = "onboarding_completed"
+
     // Terms Constants
     const val TERMS_PREFIX = "By tapping next, you are agreeing to PlantID "
     const val TERMS_OF_USE = "Terms of Use"
