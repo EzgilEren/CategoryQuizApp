@@ -6,13 +6,17 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.ezgieren.plantidentifyapp.databinding.ItemPaywallFeatureBinding
+import com.ezgieren.plantidentifyapp.R
+import com.ezgieren.plantidentifyapp.databinding.ItemQuestionBinding
 import com.ezgieren.plantidentifyapp.domain.model.Question
 
-class HomepageAdapter : ListAdapter<Question, HomepageAdapter.QuestionViewHolder>(DiffCallback()) {
+class QuestionAdapter :
+    ListAdapter<Question, QuestionAdapter.QuestionViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QuestionViewHolder {
-        val binding = ItemPaywallFeatureBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemQuestionBinding.inflate(
+            LayoutInflater.from(parent.context), parent, false
+        )
         return QuestionViewHolder(binding)
     }
 
@@ -20,15 +24,16 @@ class HomepageAdapter : ListAdapter<Question, HomepageAdapter.QuestionViewHolder
         holder.bind(getItem(position))
     }
 
-    inner class QuestionViewHolder(private val binding: ItemPaywallFeatureBinding) :
+    inner class QuestionViewHolder(private val binding: ItemQuestionBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(question: Question) {
             binding.tvTitle.text = question.title
             binding.tvSubtitle.text = question.subtitle
 
-            Glide.with(binding.ivQuestion.context)
+            Glide.with(binding.root.context)
                 .load(question.imageUrl)
+                .placeholder(R.drawable.bg_image_placeholder) // fallback image
                 .into(binding.ivQuestion)
         }
     }

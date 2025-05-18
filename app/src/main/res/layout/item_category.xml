@@ -1,0 +1,43 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/tvCategoryTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Vegetables and Fruits"
+            android:textColor="#1E1E1E"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:lineSpacingExtra="2dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivCategory"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="12dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/app_name"
+            app:shapeAppearanceOverlay="@style/RoundedImageStyle" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

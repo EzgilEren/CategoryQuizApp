@@ -35,13 +35,13 @@
 
     <fragment
         android:id="@+id/homepageFragment"
-        android:name="com.ezgieren.plantidentifyapp.ui.home.HomepageFragment"
+        android:name="com.ezgieren.plantidentifyapp.ui.home.HomeFragment"
         android:label="Homepage"
-        tools:layout="@layout/homepage_fragment" />
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/questionFragment"
-        android:name="com.ezgieren.plantidentifyapp.ui.home.HomepageFragment"
+        android:name="com.ezgieren.plantidentifyapp.ui.home.HomeFragment"
         android:label="Questions">
         <argument
             android:name="categoryId"

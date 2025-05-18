@@ -6,16 +6,16 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.ezgieren.plantidentifyapp.databinding.PaywallOptionItemBinding
+import com.ezgieren.plantidentifyapp.databinding.ItemCategoryBinding
 import com.ezgieren.plantidentifyapp.R
 import com.ezgieren.plantidentifyapp.domain.model.Category
 
-class PaywallAdapter(
+class CategoryAdapter(
     private val onItemClick: (Category) -> Unit
-) : ListAdapter<Category, PaywallAdapter.CategoryViewHolder>(CategoryDiffCallback()) {
+) : ListAdapter<Category, CategoryAdapter.CategoryViewHolder>(CategoryDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
-        val binding = PaywallOptionItemBinding.inflate(
+        val binding = ItemCategoryBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
         return CategoryViewHolder(binding)
@@ -25,7 +25,7 @@ class PaywallAdapter(
         holder.bind(getItem(position))
     }
 
-    inner class CategoryViewHolder(private val binding: PaywallOptionItemBinding) :
+    inner class CategoryViewHolder(private val binding: ItemCategoryBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: Category) {
@@ -38,7 +38,7 @@ class PaywallAdapter(
                     .centerCrop()
                     .into(binding.ivCategory)
             } else {
-                binding.ivCategory.setImageResource(R.drawable.placeholder_image)
+                binding.ivCategory.setImageResource(R.drawable.bg_image_placeholder)
             }
 
             binding.root.setOnClickListener {

@@ -13,7 +13,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:background="@drawable/primary_button_shape"
+        android:background="@drawable/bg_button_primary"
         android:fontFamily="@font/roboto_medium"
         android:text="@string/paywall_try_free"
         android:textAllCaps="true"
@@ -250,20 +250,22 @@
     </RelativeLayout>
 
     <!-- Try Free Button -->
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnTryFree"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:background="@drawable/primary_button_shape"
-        android:fontFamily="@font/roboto_medium"
+        android:backgroundTint="@color/primaryGreen"
         android:text="@string/paywall_try_free"
-        android:textAllCaps="true"
         android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textAllCaps="true"
+        android:fontFamily="@font/roboto_medium"
+        app:cornerRadius="12dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/planYearly" />
 
     <!-- Info Text -->

@@ -29,16 +29,14 @@ class PaywallFragment : Fragment() {
 
     private fun setupCloseButton() {
         binding.btnClose.setOnClickListener {
-            // Geri navigasyon – genelde önceki ekrana dönüş
+            // Back navigation
             findNavController().navigateUp()
         }
     }
 
     private fun setupCTAButton() {
         binding.btnTryFree.setOnClickListener {
-            // Gerçek uygulamada: ödeme veya premium aktivasyonu burada başlatılır
-            // Şimdilik ana ekrana yönlendirme gibi simülasyon yapılabilir
-            findNavController().navigate(R.id.action_paywall_to_homepage) // örnek yönlendirme
+            findNavController().navigate(R.id.action_paywall_to_homepage) //dummy root
         }
     }
 

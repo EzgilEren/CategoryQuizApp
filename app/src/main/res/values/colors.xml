@@ -18,4 +18,11 @@
     <color name="primaryText">#13231B</color>
     <color name="secondaryText">#13231BB2</color>
     <color name="termsText">#597165B2</color>
+    <color name="premiumBoxStroke">#1A13231B</color>
+    <color name="premiumArrow">#D0B070</color>
+    <color name="premiumDarkBackground">#221D18</color>
+    <color name="premiumTitle">#FFFFFF</color>
+    <color name="premiumSubtitle">#FFE7B8</color>
+    <color name="activeTab">#1A6525</color>
+    <color name="inactiveTab">#999999</color>
 </resources>

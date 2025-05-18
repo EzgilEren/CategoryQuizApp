@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <LinearLayout
+            android:id="@+id/navItemsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="5">
+
+            <!-- Home -->
+            <LinearLayout
+                android:id="@+id/navHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_home"
+                    app:tint="@color/activeTab" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textSize="10sp"
+                    android:textColor="@color/activeTab" />
+            </LinearLayout>
+
+            <!-- Diagnose -->
+            <LinearLayout
+                android:id="@+id/navDiagnose"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_diagnose"
+                    app:tint="@color/inactiveTab" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diagnose"
+                    android:textSize="10sp"
+                    android:textColor="@color/inactiveTab" />
+            </LinearLayout>
+
+            <!-- Scan (Center Button) -->
+            <FrameLayout
+                android:id="@+id/navScan"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginTop="-36dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_scan_button"
+                android:elevation="6dp">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_scan" />
+            </FrameLayout>
+
+            <!-- My Garden -->
+            <LinearLayout
+                android:id="@+id/navMyGarden"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_garden"
+                    app:tint="@color/inactiveTab" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Garden"
+                    android:textSize="10sp"
+                    android:textColor="@color/inactiveTab" />
+            </LinearLayout>
+
+            <!-- Profile -->
+            <LinearLayout
+                android:id="@+id/navProfile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_profile"
+                    app:tint="@color/inactiveTab" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textSize="10sp"
+                    android:textColor="@color/inactiveTab" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

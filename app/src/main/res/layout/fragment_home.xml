@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Scrollable content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header -->
+            <include layout="@layout/view_home_header" />
+
+            <!-- Premium Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/premiumCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="4dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/premiumDarkBackground">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="20dp"
+                    android:gravity="center_vertical">
+
+                    <FrameLayout
+                        android:id="@+id/envelopeWrapper"
+                        android:layout_width="50dp"
+                        android:layout_height="42dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true">
+
+                        <ImageView
+                            android:id="@+id/imgEnvelope"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_envelope_dark"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:id="@+id/tvBadge"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="top|end"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginEnd="1dp"
+                            android:background="@drawable/bg_notification_badge"
+                            android:text="1"
+                            android:textSize="8sp"
+                            android:textColor="@android:color/white"
+                            android:gravity="center"
+                            android:elevation="8dp" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/infoLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toStartOf="@id/imgArrow"
+                        android:layout_toEndOf="@id/envelopeWrapper"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp">
+
+                        <TextView
+                            android:id="@+id/tvPremiumTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/premium_title"
+                            android:textColor="@color/premiumTitle"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/roboto_bold" />
+
+                        <TextView
+                            android:id="@+id/tvPremiumSubtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/premium_subtitle"
+                            android:textColor="@color/premiumSubtitle"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imgArrow"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_arrow_forward"
+                        app:tint="#D0B070" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Questions -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvQuestions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal" />
+
+            <!-- Categories Grid -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2" />
+
+            <!-- Progress Indicator -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                android:layout_gravity="center" />
+
+            <!-- Error Text -->
+            <TextView
+                android:id="@+id/tvError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/error_generic"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Fixed Bottom Navigation Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <LinearLayout
+            android:id="@+id/navItemsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="5">
+
+            <!-- Home -->
+            <LinearLayout
+                android:id="@+id/navHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_home"
+                    app:tint="@color/activeTab" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textSize="10sp"
+                    android:textColor="@color/activeTab" />
+            </LinearLayout>
+
+            <!-- Diagnose -->
+            <LinearLayout
+                android:id="@+id/navDiagnose"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_diagnose"
+                    app:tint="@color/inactiveTab" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diagnose"
+                    android:textSize="10sp"
+                    android:textColor="@color/inactiveTab" />
+            </LinearLayout>
+
+            <!-- Scan (Center Button) -->
+            <FrameLayout
+                android:id="@+id/navScan"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="top"
+                android:translationY="-20dp"
+                android:background="@drawable/bg_scan_button"
+                android:elevation="6dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_scan" />
+            </FrameLayout>
+
+            <!-- My Garden -->
+            <LinearLayout
+                android:id="@+id/navMyGarden"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_garden"
+                    app:tint="@color/inactiveTab" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Garden"
+                    android:textSize="10sp"
+                    android:textColor="@color/inactiveTab" />
+            </LinearLayout>
+
+            <!-- Profile -->
+            <LinearLayout
+                android:id="@+id/navProfile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_profile"
+                    app:tint="@color/inactiveTab" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textSize="10sp"
+                    android:textColor="@color/inactiveTab" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -6,4 +6,9 @@
         <item name="android:fontFamily">@font/roboto_bold</item>
         <item name="android:lineSpacingExtra">4dp</item>
     </style>
+
+    <style name="RoundedImageStyle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
 </resources>

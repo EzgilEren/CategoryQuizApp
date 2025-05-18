@@ -21,11 +21,6 @@
     <string name="onboarding_line_1">Take a photo to</string>
     <string name="onboarding_line_2"><b>identify</b> the plant!</string>
 
-    <!-- Category Screen -->
-    <string name="category_title">Select a Category</string>
-    <string name="category_loading">Loading categories...</string>
-    <string name="category_error">Failed to load categories</string>
-
     <!-- Paywall Screen -->
     <string name="paywall_plantApp_title">PlantApp </string>
     <string name="paywall_premium_title"> Premium</string>
@@ -42,22 +37,25 @@
     <string name="paywall_links">Terms  •  Privacy  •  Restore</string>
     <string name="close">Close</string>
 
-    <!-- Question Screen -->
-    <string name="question_screen_title">Question Screen</string>
-    <string name="question_title">Questions</string>
-    <string name="question_loading">Loading questions...</string>
-    <string name="question_placeholder">Category ID: Loading...</string>
-    <string name="question_category_id">Category ID: %1$d</string>
-    <string name="question_error">Failed to load questions</string>
+    <!-- Home Screen -->
+    <!-- Premium Card Screen -->
+    <string name="premium_title">FREE Premium Available</string>
+    <string name="premium_subtitle">Tap to upgrade your account!</string>
+    <string name="greeting">Hi, plant lover!</string>
+    <string name="good_afternoon">Good Afternoon! 🌞☁️</string>
+    <string name="search_hint">Search for plants</string>
+
 
     <!-- Common -->
     <string name="error_unknown">Unknown error occurred</string>
     <string name="error_fetching_categories">Failed to load categories</string>
     <string name="loading_categories">Loading categories...</string>
     <string name="retry">Retry</string>
-    <string name="error_generic">Something went wrong</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
     <string name="back">Back</string>
     <string name="textOnboarding">Review, retake, and master any topic easily</string>
     <string name="explainOnboardingText">Get plant care guides</string>
     <string name="continueBtn">Continue</string>
+    <string name="question_title">Question Title</string>
+    <string name="question_subtitle">Question Subtitle</string>
 </resources>
